@@ -1,0 +1,914 @@
+<?php require_once 'includes/conexion.php'; ?>
+<?php require_once 'includes/helpers.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript">
+    function ConfirmAvi() {
+      var mensaje = confirm("Aviso de Privacidad , Spectralabmx.com protege tus datos para no ser usados con otro tipo de finalidades acepta o denega si quieres enviar tus datos");
+      if (mensaje) {
+        alert("Se enviaron tus datos");
+      } else {
+        alert("No se tomaran tus datos");
+        window.close();
+      }
+    }
+  </script>
+  <title>Spectralab</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="images/spec.ico">
+  <meta name="keywords" content="Disoluciones, Spectralab, Spectralab Analytical, Equipo de Distek">
+  <meta name="author" content="Spectralab">
+  <link
+    href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Courgette|EB+Garamond|Lobster|Manjari|Oleo+Script&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <div class="site-wrap">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <header class="site-navbar  site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-4 col-xl-2">
+            <a class="navbar-brand" href="#home-section">
+              <div class="imagen">
+                <img class="logo" src="images/spec.png">
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="#home-section" class="nav-link">Inicio</a></li>
+                <li><a href="#about-section" class="nav-link">Conócenos</a></li>
+                <li><a href="#team-section" class="nav-link">Equipos</a></li>
+                <li><a href="#services-section" class="nav-link">Servicios</a></li>
+                <li><a href="#contact-section" class="nav-link">Contacto</a></li>
+                <li><a href="#cursos" class="nav-link">Cursos</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+                <!--<li><a href="menu-pvt.html" class="nav-link">PVT</a></li>  Se deshabilita hasta tener las peticiones de php !-->
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#"
+              class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/banneriso.webp" alt="Second slide">
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-block w-70" src="images/vk7025.webp" alt="Curso de Validación de Sistemas Computacionales">
+          </div>
+
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/numero_uno_en_desgasificacion.webp"
+              alt="Numero uno en desgasificacion en Mexico">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/bannerexpo.gif" alt="Second slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span style="color: red;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+
+    <section class="collection py-lg-4 py-md-3 py-sm-3 py-3" id="about-section">
+      <div class="container py-lg-5 py-md-4 py-sm-4 py-3 mt-5">
+        <!--row -->
+        <div class="row" style="font-family: 'Manjari', sans-serif;">
+          <div class="col-lg-6 col-md-5 collection my-3" data-aos="fade-right" data-aos-delay="500">
+            <h4 class="sub_conocenos">¿Quiénes somos? </h4>
+            <iframe width="460" height="315" src="https://www.youtube.com/embed/oO4cX5TfGqQ?si=WsqhBWkeeBFNdulR"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <p class="mt-2 text-justify">Spectralab Instrumentación somos una compañía que fue establecida en el año
+              2009
+              especializada en venta de equipo, servicio, soporte técnico y de consumibles para Disolución y
+              Espectrofotometría, equipos de pruebas físicas.
+              En la actualidad contamos con la representación exclusiva de la marca Distek. Nuestros ingenieros cuentan
+              con más de 20 años de experiencia en el área y trabajando para la industria farmacéutica.</p>
+          </div>
+
+          <div class="col-lg-6 col-md-3 title-right-side my-3" data-aos="fade-up-left" data-aos-delay="500"
+            data-aos-duration="2000">
+            <div class="rotated-title">
+              <h3 class="title mb-lg-4 mb-md-3 mb-2 ml-5">Conócenos</h3>
+            </div>
+          </div>
+        </div>
+        <!--// row -->
+        <!-- row -->
+        <div class="row mid-row-grids">
+          <div class="col-lg-6 col-md-6 collective-images my-3">
+            <div class="imagenes">
+              <img src="images/mision.webp" alt="news image" class="img-fluid" data-aos="fade-up-right"
+                data-aos-delay="500" data-aos-duration="2000" loading="lazy">
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 pt-5 collection my-3" data-aos="fade-up-left" data-aos-delay="500"
+            data-aos-duration="2000" style="text-align: center">
+            <h4>Misión</h4>
+            <p class="mt-2 text-justify">Colaborar con las empresas de la industria farmacéutica para garantizar la
+              confiabilidad de
+              sus productos, a través de la calificación, calibración, distribución e instalación de equipos y
+              consumibles, desarrollando productos y servicios innovadores que resuelvan las necesidades y expectativas
+              de nuestros clientes y el mercado.</p>
+          </div>
+        </div>
+        <!--// row -->
+        <!-- row -->
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6 col-md-6 collection my-3 align-items-center" data-aos="fade-up-right"
+            data-aos-delay="500" style="text-align: center;">
+            <h4> Visión</h4>
+            <p class="mt-2 text-justify">
+              Ser empresa que genera alto valor agregado en los servicios que ofertamos a nuestros clientes.
+              Ser desarrolladores tecnológicos en el área de disolución, pruebas físicas y en otras que estén
+              involucradas
+              directamente en nuestro campo de especialización.
+              Ser líderes en las áreas de servicio a la industria farmacéutica en el campo de instrumentación analítica.
+              Ser empresa a la vanguardia en la calibración, soporte y suministros de equipos de disolución y pruebas
+              físicas.
+              Ser empresa en donde todos deseen trabajar.</p>
+          </div>
+          <div class="col-lg-6 col-md-6 collective-images my-3 d-flex">
+            <div class="imagenes d-flex justify-content-center">
+              <img src="images/logo_spectralab_iso.webp" alt="logotipo de spectralab ISO" class="img-fluid" data-aos="fade-up-left"
+                data-aos-delay="500" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <!--// row -->
+      </div>
+    </section>
+
+
+    <section class="site-section border-bottom" id="team-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-5 text-left">
+            <h2 class="section-title mb-3">Nuestros<br> Equipos</h2>
+
+          </div>
+        </div>
+        <div class="row">
+
+
+          <div class="equiposCont col-md-6 col-lg-3 mb-4 " data-aos="fade-down" data-aos-delay="400">
+            <a href="5300.html">
+              <div class="team-member justify-content-center">
+                <figure>
+                  <img src="images/5300.webp" alt="Image" class="img-fluid" loading="lazy">
+                </figure>
+
+                <div class="p-3">
+
+                  <h3>Eclipse 5300</h3>
+                  <span class="position">Automuestreador para Disolución autómatico</span>
+
+                </div>
+              </div>
+            </a>
+
+          </div>
+
+          <div class="equiposCont col-md-6 col-lg-3 mb-4" data-aos="fade-down" data-aos-delay="500"
+            data-aos-duration="5000">
+            <a href="Opt-410.html">
+              <div class="team-member">
+                <figure>
+
+                  <img src="images/410.webp" alt="Image" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="p-3">
+                  <h3 class="titulo-equipo">Opt-Diss 410</h3>
+                  <span class="position">Pruebas de UV con fibra óptica en sitio para Disolución</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="equiposCont col-md-6 col-lg-3 mb-4" data-aos="fade-down" data-aos-delay="700">
+            <a href="2500.html">
+              <div class="team-member">
+                <figure>
+
+                  <img src="images/2500T.webp" alt="Image" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="p-3">
+                  <h3>Distek 2500</h3>
+                  <span class="position">Instrumento de Disolución con baño.</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="equiposCont col-md-6 col-lg-3 mb-4" data-aos="fade-down" data-aos-delay="900">
+            <a href="4500.html">
+              <div class="team-member">
+                <figure>
+
+                  <img src="images/4500.webp" alt="Image" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="p-3">
+                  <h3>Ezfill +</h3>
+                  <span class="position">Desgasificador y preparador de medio para Disolución</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="equiposCont col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <a href="3200.html">
+              <div class="team-member">
+                <figure>
+
+                  <img src="images/3200.webp" alt="Image" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="p-3">
+                  <h3>SensIR 3200</h3>
+                  <span class="position">Instrumento de Desintegración sin baño</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="equiposCont col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+            <a href="2500Select.html">
+              <div class="team-member">
+                <figure>
+
+                  <img src="images/2500SelectT.webp" alt="Image" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="p-3">
+                  <h3>Distek 2500 Select</h3>
+                  <span class="position">Instrumento de Disolución sin baño</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="equiposCont col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="600">
+            <a href="2500RTD.html">
+              <div class="team-member">
+                <figure>
+
+                  <img src="images/2500RTDT.webp" alt="Image" class="img-fluid" loading="lazy">
+                </figure>
+                <div class="p-3">
+                  <h3>Distek 2500 RTD</h3>
+                  <span class="position">Instrumento de Disolución con baño</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class="site-section border-bottom bg-light" id="services-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Nuestros Servicios</h2>
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-autorenew"></span></div>
+              <div>
+                <h3><span class="text-primary icon-checkmark"></span>&nbsp;&nbsp;Calificaciones</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-backspace"></span></div>
+              <div>
+                <h3><span class="text-primary icon-pencil2"></span>&nbsp;&nbsp;Capacitaciones</h3>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-beenhere"></span></div>
+              <div>
+                <h3><span class="text-primary icon-wrench"></span>&nbsp;&nbsp;Refacciones</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
+              <div>
+                <h3><span class="text-primary icon-meter"></span>&nbsp;&nbsp;Calibraciones y calificaciones mecánicas a
+                  disolutores</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
+              <div>
+                <h3><span class="text-primary icon-meter"></span>&nbsp;&nbsp;Calibraciones y calificaciones mecánicas a
+                  desintegradores</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
+              <div>
+                <h3><span class="text-primary icon-meter"></span>&nbsp;&nbsp;Calibraciones y calificaciones mecánicas a
+                  desintegradores de óvulos</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
+              <div>
+                <h3><span class="text-primary icon-meter"></span>&nbsp;&nbsp;Calibraciones y calificaciones mecánicas a
+                  durómetros</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
+              <div>
+                <h3><span class="text-primary icon-meter"></span>&nbsp;&nbsp;Calibraciones y calificaciones mecánicas a
+                  friabilizadores</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-cloud_done"></span></div>
+              <div>
+                <h3><span class="text-primary icon-meter"></span>&nbsp;&nbsp;Calibraciones y calificaciones mecánicas a
+                  espectrofotómetros</h3>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-beenhere"></span></div>
+              <div>
+                <h3><span class="text-primary icon-equalizer"></span>&nbsp;&nbsp;Calibraciones y calificaciones
+                  analíticas</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-business_center"></span></div>
+              <div>
+                <h3><span class="text-primary icon-cogs"></span>&nbsp;&nbsp;Servicios correctivos en forma puntual</h3>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1000">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-beenhere"></span></div>
+              <div>
+                <h3><span class="text-primary icon-wrench"></span>&nbsp;&nbsp;Mantenimiento preventivo en forma puntual
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1100">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-business_center"></span></div>
+              <div>
+                <h3><span class="text-primary icon-lab"></span>&nbsp;&nbsp;Lámparas para Espectrofotómetros y Detectores
+                  para HPLC</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1100">
+            <div class="unit-4 d-flex">
+              <div class="unit-4-icon mr-4"><span class="text-primary icon-business_center"></span></div>
+              <div>
+                <h3><span class="text-primary icon-display"></span>&nbsp;&nbsp;Validación de sistemas computarizados
+                </h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12 text-center">
+          <div class="ventajas">
+            <br>
+            <h2 class="section-title mb-3">Ventajas de nuestros servicios</h2>
+            <br>
+
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 m-auto" data-aos="fade-up" data-aos-delay="200">
+
+
+              <div>
+                <h3><span style="color: #e81050; display: block;" class="fa fa-users fa-3x"></span>&nbsp;&nbsp;Personal
+                  certificado</h3>
+              </div>
+
+
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 m-auto" data-aos="fade-up" data-aos-delay="500">
+
+
+              <div>
+                <h3><span style="color: #e81050; display: block;"
+                    class="fa fa-sliders fa-3x"></span>&nbsp;&nbsp;Instrumentos calibrados</h3>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 m-auto" data-aos="fade-up" data-aos-delay="900">
+
+
+            <div>
+              <h3><span style="color: #e81050; display: block;" class="fa fa-clock-o fa-3x"></span>&nbsp;&nbsp;Tiempo de
+                respuesta máximo 24 horas en el área metropolitana</h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="site-section bg-light" id="contact-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="section-title mb-3">Más Información</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-7 mb-5">
+
+
+
+          <form action="contacto.php" method="POST" class="p-5 bg-white">
+
+            <h2 class="h4 text-black mb-5">Contactanos</h2>
+
+            <div class="row form-group" data-aos="zoom-in-right" data-aos-delay="500">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="text-black" for="nombre">Nombre</label>
+                <input type="text" name="nombre" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label class="text-black" for="apellidos">Apellidos</label>
+                <input type="text" name="apellidos" class="form-control">
+              </div>
+            </div>
+
+            <div class="row form-group" data-aos="zoom-in-right" data-aos-delay="500">
+
+              <div class="col-md-12">
+                <label class="text-black" for="empresa">Empresa</label>
+                <input type="text" name="empresa" class="form-control">
+              </div>
+              <div class="col-md-12">
+                <label class="text-black" for="area">Area</label>
+                <input type="text" name="area" class="form-control">
+              </div>
+              <div class="col-md-12">
+                <label class="text-black" for="puesto">Puesto</label>
+                <input type="text" name="puesto" class="form-control">
+              </div>
+              <div class="col-md-12">
+                <label class="text-black" for="email">Correo</label>
+                <input type="email" name="email" class="form-control">
+              </div>
+              <div class="col-md-12">
+                <label class="text-black" for="telefono">Telefono</label>
+                <input type="text" name="telefono" class="form-control">
+              </div>
+
+            </div>
+
+            <div class="row form-group">
+
+
+            </div>
+
+            <div class="row form-group" data-aos="zoom-in-right" data-aos-delay="500">
+              <div class="col-md-12">
+                <label class="text-black" for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="7" class="form-control"
+                  placeholder="Escribe tus dudas o cotizaciones"></textarea>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <a href="index.html">
+                  <input type="submit" onclick="ConfirmAvi()" value="Enviar Mensaje"
+                    class="btn btn-dark btn-md text-white">
+                </a>
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+        <div class="col-md-5" data-aos="fade-up-left" data-aos-delay="500">
+
+          <div class="p-4 mb-3 bg-white">
+
+
+            <p class="mb-0 font-weight-bold"><span class="text-primary icon-phone"></span>&nbsp;&nbsp;Telefono</p>
+            <p class="mb-4"><a href="#"><span class="text-primary icon-user"></span>&nbsp;&nbsp;55 57018634</a>
+            </p>
+            <p class="mb-4"><a href="#"><span class="text-primary icon-user"></span>&nbsp;&nbsp;55 15452043</a>
+            </p>
+
+            <p class="mb-0 font-weight-bold"><span class="text-primary icon-mail4"></span>&nbsp;&nbsp;Correo Electronico
+            </p>
+            <p class="mb-0"><span class="text-primary icon-user"></span>&nbsp;&nbsp;César Estrada Flores <br><a
+                href="#">cestrada@spectralabmx.com</a></p>
+            <p class="mb-0"><span class="text-primary icon-user"></span>&nbsp;&nbsp;Rolando Vázquez Baldin <br><a
+                href="#">rvazquez@spectralabmx.com</a></p>
+
+            <p class="mb-0 font-weight-bold"><span class="text-primary icon-location2"></span>&nbsp;&nbsp;Domicilio</p>
+            <p class="mb-4">Chimalpopoca 76, Arenal 2da Secc, Venustiano Carranza, 15680 Ciudad de México, CDMX</p>
+            <br>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1583.6506361566112!2d-99.18427964137234!3d19.25724931978112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce010e1757e961%3A0xa0d60d06bbf456f!2sSpectralab!5e0!3m2!1ses!2smx!4v1650469480181!5m2!1ses!2smx"
+              width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="site-section border-bottom bg-light" id="cursos">
+    <div class="container ">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="section-title mb-3">Temario de Cursos 2024</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+          <div class="unit-4 d-flex">
+            <img src="images/1.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Buenas Prácticas BPL y BPD">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Curso de Buenas Prácticas BPL y BPD</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="unit-4 d-flex">
+            <img src="images/4.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Fundamentos de Disolución">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Fundamentos de Disolución</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="unit-4 d-flex">
+            <img src="images/7.webp" class="rounded-circle w-25" loading="lazy" alt="Curso CFR21 Parte 11">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">CFR21 Parte 11</h3>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="unit-4 d-flex">
+            <img src="images/2.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Determinación de Intervalos de Calibración">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Determinación de Intervalos de Calibración</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="unit-4 d-flex">
+            <img src="images/5.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Validación de Sistemas Computarizados">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Validación de Sistemas Computarizados </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="unit-4 d-flex">
+            <img src="images/8.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Desgasificación, Muestreo e Investigación de fallas en Pruebas de Disolución">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Desgasificación, Muestreo e Investigación</h3>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="700">
+          <div class="unit-4 d-flex">
+            <img src="images/3.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Primeros auxilios a Disolutores Vankel VK70XX">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4"> Primeros auxilios a Disolutores Vankel VK70XX</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="800">
+          <div class="unit-4 d-flex">
+            <img src="images/6.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Primeros Auxilios a Disolutores Distek 2100">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Primeros Auxilios a Disolutores Distek 2100</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="900">
+          <div class="unit-4 d-flex">
+            <img src="images/9.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Análisis e Identificación de Riesgos">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Análisis e Identificación de Riesgos</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1000">
+          <div class="unit-4 d-flex">
+            <img src="images/logo 1.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Bioequivalencia de medicamentos">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Bioequivalencia de medicamentos.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1100">
+          <div class="unit-4 d-flex">
+            <img src="images/logo 2.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Buenas prácticas de fabricación en dispositivos médicos">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Buenas prácticas de fabricación en dispositivos médicos</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1200">
+          <div class="unit-4 d-flex">
+            <img src="images/logo 3.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Buenas practicas de fabricación farmacéutica">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Buenas prácticas de fabricación en la industria farmacéutica.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1300">
+          <div class="unit-4 d-flex">
+            <img src="images/logo 5.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Calificacion de Instalación">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Calificación de instalación y operación (IQ OQ) para equipos de laboratorio.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1400">
+          <div class="unit-4 d-flex">
+            <img src="images/logo 6.webp" class="rounded-circle w-25" loading="lazy">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Micro encapsulación por los métodos de secado por aspersión y por goteo ultrasónico.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1500">
+          <div class="unit-4 d-flex">
+            <img src="images/logo 7.webp" class="rounded-circle w-25" loading="lazy">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Mantenimiento de analizadores NIR de laboratorio y proceso</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="1600">
+          <div class="unit-4 d-flex">
+            <img src="images/logo 8.webp" class="rounded-circle w-25" loading="lazy">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Métodos analíticos por NIR con software chemométrico Vision,&nbsp; NIRware y NIRcal.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="900">
+          <div class="unit-4 d-flex">
+            <img src="images/logo 10.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Validacion de procesos">
+            <div class="d-flex align-items-center">
+              <h3 class="ml-4">Validación de procesos.</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="900">
+          <div class="unit-4 d-flex">
+            <img src="images/data_integrity.webp" class="rounded-circle w-25" loading="lazy" alt="Curso Data Integrity">
+            <div class="d-flex align-items-center" >
+              <h3 class="ml-4">Data Integrity</h3>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v5.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your customer chat code -->
+  <div class="fb-customerchat" attribution=setup_tool page_id="111129497051192" theme_color="#0f0b4d"
+    logged_in_greeting="Hola, ¿En que te puedo ayudar?" logged_out_greeting="Hola, ¿En que te puedo ayudar?">
+  </div>
+
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h2 class="footer-heading mb-4 text-center text-md-left">Política de Calidad</h2>
+          <p class="text-justify text-md-left">Mantener e incrementar el nivel de puntualidad, disponibilidad,
+            confiabilidad y buenas prácticas en las
+            calibraciones, servicio de mantenimiento preventivo, correctivo y la capacitación.</p>
+
+        </div>
+        <div class="col-md-3 text-center text-md-left">
+          <h2 class="footer-heading mb-4">Redirección Rapida</h2>
+          <ul class="list-unstyled">
+            <li><a href="#about-section"><span class="text-light icon-users"></span>&nbsp;&nbsp;Conócenos</a></li>
+            <li><a href="#team-section"><span class="text-light icon-lab"></span>&nbsp;&nbsp;Equipos</a></li>
+            <li><a href="#services-section"><span class="text-light icon-wrench"></span>&nbsp;&nbsp;Servicios</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-4">
+            <h2 class="footer-heading mb-4 text-center text-md-left">Subscribete </h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent"
+                  placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="boton-footer btn btn-primary text-white" type="button"
+                    id="button-addon2">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="siguenos text-center text-md-left">
+            <h2 class="footer-heading mb-4">Siguenos</h2>
+            <a href="https://www.facebook.com/Spectralabmx" class="pl-1 pr-3"><span class="icon-facebook"></span></a>
+            <a href="#" class="pl-1 pr-3"><span class="icon-twitter"></span></a>
+            <a href="#" class="pl-1 pr-3"><span class="icon-instagram"></span></a>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+    <div class="row pt-5 mt-2 text-center">
+      <div class="col-md-12">
+        <div class="border-top pt-5">
+          <p>
+
+            Spectralab Instrumentación Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved |
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </footer>
+
+  </div> <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

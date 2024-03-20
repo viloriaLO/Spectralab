@@ -1,0 +1,286 @@
+
+<?php require_once 'includes/conexion.php'; ?>
+<?php require_once 'includes/helpers.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spectralab</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/spec.ico">
+    <meta name="keywords" content="Disoluciones, Equipo de Distek,2500 distek,2500 Select Distek">
+    <meta name="author" content="Spectralab">
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Courgette|EB+Garamond|Lobster|Manjari|Oleo+Script&display=swap" rel="stylesheet">
+
+
+
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+          
+          <div class="col-4 col-xl-2">
+            <a class="navbar-brand" href="#home-section">
+                <div class="imagen">
+    <img src="images/logo-trans.png" width="340" height="80">
+    </div>
+  </a>
+          </div>
+
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="index.html#home-section" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#about-section" class="nav-link">Conocenos</a></li>
+                <li><a href="index.html#team-section" class="nav-link">Equipos</a></li>
+                <li><a href="index.html#services-section" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#contact-section" class="nav-link">Contacto</a></li>
+                <li><a href="index.html#cursos" class="nav-link">Cursos</a></li>
+                <li><a href="catalogo.html" class="nav-link">Catalogo</a></li>
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+    <div class="espacio" style="height: 150px; background: #0f0b4d;"></div>
+
+
+
+
+
+
+
+
+    <section class="site-section bg-light" id="contact-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-12 text-center">
+              <h2 class="section-title mb-3">PVT para paletas </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-5">
+  
+              
+  
+              <form action="paletas.php" method="POST" class="p-5 bg-white">
+                
+                <h2 class="h4 text-black mb-5">Ingrese los datos de la absorbancia</h2> 
+  
+                <div class="row form-group" data-aos="zoom-in-right" data-aos-delay="500">
+                  <div class="col-md-7 mb-3 mb-md-0">
+                    <label class="text-black" for="paleta1">Absorbancia del vaso 1</label>
+                    <input type="text" name="paleta1" class="form-control">
+                  </div>
+                </div>
+  
+                <div class="row form-group" data-aos="zoom-in-right" data-aos-delay="500">
+                  
+                  <div class="col-md-7">
+                    <label class="text-black" for="paleta2">Absorbancia del vaso 2</label> 
+                    <input type="text" name="paleta2" class="form-control">
+                  </div>
+                  <div class="col-md-7">
+                    <label class="text-black" for="paleta3">Absorbancia del vaso 3</label> 
+                    <input type="text" name="paleta3" class="form-control">
+                  </div>
+                  <div class="col-md-7">
+                    <label class="text-black" for="paleta4">Absorbancia del vaso 4</label> 
+                    <input type="text" name="paleta4" class="form-control">
+                  </div>
+                  <div class="col-md-7">
+                    <label class="text-black" for="paleta5">Absorbancia del vaso 5</label> 
+                    <input type="text" name="paleta5" class="form-control">
+                  </div>
+                  <div class="col-md-7">
+                    <label class="text-black" for="paleta6">Absorbancia del vaso 6</label> 
+                    <input type="text" name="paleta6" class="form-control">
+                  </div>
+  
+                
+                <h2 class="h4 text-black mb-5">Estandar de paletas</h2>
+                
+                    <div class="col-md-7">
+                        <label class="text-black" for="std1">STD 1</label> 
+                        <input type="text" name="std1" class="form-control">
+                      </div>
+                  
+                  <div class="col-md-7">
+                    <label class="text-black" for="std2">STD 2</label> 
+                    <input type="text" name="std2" class="form-control">
+                  </div>
+                  <div class="col-md-7">
+                    <label class="text-black" for="std3">STD 3</label> 
+                    <input type="text" name="std3" class="form-control">
+                  </div>
+                  <div class="col-md-7">
+                    <label class="text-black" for="std4">STD 4</label> 
+                    <input type="text" name="std4" class="form-control">
+                  </div>
+                  <div class="col-md-7">
+                    <label class="text-black" for="std5">STD 5</label> 
+                    <input type="text" name="std5" class="form-control">
+                  </div>
+                  <div class="col-md-7">
+                    <label class="text-black" for="std6">STD 6</label> 
+                    <input type="text" name="std6" class="form-control">
+                  </div>
+  
+              
+
+
+                    <div class="col-md-7">
+                        <label class="text-black" for="peso">Peso del estandar</label> 
+                        <input type="text" name="peso" class="form-control">
+                      </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
+
+                    <input type="submit" value="Calcular" class="btn btn-dark btn-md text-white">
+
+                  </div>
+                </div>
+  
+    
+              </form>
+            </div>
+            <div class="col-md-4" data-aos="fade-up-left" data-aos-delay="500">
+              
+              <img src="images/2500SelectT.png" style="width: 200; height: 300;" alt="">
+
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+            <footer class="site-footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h2 class="footer-heading mb-4">Política de Calidad</h2>
+                          <p>Mantener e incrementar el nivel de puntualidad, disponibilidad, confiabilidad y buenas prácticas en las calibraciones, servicio de mantenimiento preventivo, correctivo y la capacitación.</p>
+                        </div>
+                        <div class="col-md-3 ml-auto">
+                          <h2 class="footer-heading mb-4">Redirección Rapida</h2>
+                          <ul class="list-unstyled">
+                            <li><a href="#about-section"><span class="text-primary icon-users"></span>&nbsp;&nbsp;Conocenos</a></li>
+                            <li><a href="#team-section"><span class="text-primary icon-lab"></span>&nbsp;&nbsp;Equipos</a></li>
+                            <li><a href="#services-section"><span class="text-primary icon-wrench"></span>&nbsp;&nbsp;Servicios</a></li>
+                            
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="mb-4">
+                        <h2 class="footer-heading mb-4">Subscribete </h2>
+                      <form action="#" method="post" class="footer-subscribe">
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Ingresa tu correo" aria-label="Ingresa tu correo" aria-describedby="button-addon2">
+                          <div class="input-group-append">
+                            <button class="btn btn-primary text-black" type="button" id="button-addon2">Enviar</button>
+                          </div>
+                        </div>
+                      </form>  
+                      </div>
+                      
+                      <div class="">
+                        <h2 class="footer-heading mb-4">Siguenos</h2>
+                          <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                          <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                          <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                      </div>
+          
+          
+                    </div>
+                  </div>
+                  <div class="row pt-5 mt-5 text-center">
+                    <div class="col-md-12">
+                      <div class="border-top pt-5">
+                      <p>
+                  
+                 Spectralab Instrumentación Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | 
+                 
+                </p>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </footer>
+          
+            </div> <!-- .site-wrap -->
+          
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="js/jquery-ui.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/jquery.stellar.min.js"></script>
+            <script src="js/jquery.countdown.min.js"></script>
+            <script src="js/bootstrap-datepicker.min.js"></script>
+            <script src="js/jquery.easing.1.3.js"></script>
+            <script src="js/aos.js"></script>
+            <script src="js/jquery.fancybox.min.js"></script>
+            <script src="js/jquery.sticky.js"></script>
+          
+            
+            <script src="js/main.js"></script>
+              
+            </body>
+          </html>
